@@ -2,12 +2,12 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Carta para você</title>
+  <title>Convite Kairós</title>
   <style>
     body {
       margin: 0;
       padding: 0;
-      background: #f2f2f2;
+      background: #f8f9fa;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -16,8 +16,8 @@
     }
 
     .envelope {
-      width: 300px;
-      height: 200px;
+      width: 320px;
+      height: 220px;
       position: relative;
       background: white;
       border: 2px solid #ccc;
@@ -66,7 +66,15 @@
     }
 
     h2 {
-      margin: 0 0 10px;
+      margin-top: 0;
+      font-size: 1.2rem;
+      color: #333;
+    }
+
+    p {
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.4;
     }
   </style>
 </head>
@@ -75,13 +83,26 @@
   <div class="envelope" id="envelope">
     <div class="flap" id="flap"></div>
     <div class="letter" id="letter">
-      <h2>📬 Mensagem Especial</h2>
-      <p>A mensagem já enviou.</p>
+      <h2>📬 Convite Especial</h2>
+      <p>
+        É com grande alegria que convidamos você para viver uma experiência única com Deus!
+      </p>
+      <p>
+        💒 <strong>KAIRÓS – Missão Jovens Sarados</strong><br>
+        📍 Cabreúva - Paróquia Maria de Nazaré, Rua Adélia Sem N°<br>
+        🗓️ Data: <em>[26/07]</em><br>
+        ⏰ Horário: <em>[19h30]</em>
+      </p>
+      <p>
+        Um dia de cura, louvor, adoração e amizade.<br>
+        Venha deixar Deus transformar sua vida!
+      </p>
+      <p><em>"Jovens, sede fortes, porque a Palavra de Deus permanece em vós." (1Jo 2,14)</em></p>
+      <p><strong>Esperamos por você!</strong></p>
     </div>
   </div>
 
   <script>
-    // Aguarda 3 segundos para abrir a carta
     setTimeout(() => {
       document.getElementById('flap').classList.add('open');
       document.getElementById('letter').classList.add('show');

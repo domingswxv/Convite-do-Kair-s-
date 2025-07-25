@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Carta para você</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #f2f2f2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .envelope {
+      width: 300px;
+      height: 200px;
+      position: relative;
+      background: white;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      cursor: default;
+    }
+
+    .flap {
+      width: 100%;
+      height: 100%;
+      background: white;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform-origin: top;
+      transform: rotateX(0deg);
+      transition: transform 1.2s ease-in-out;
+      z-index: 2;
+    }
+
+    .flap.open {
+      transform: rotateX(-180deg);
+    }
+
+    .letter {
+      position: absolute;
+      top: 10%;
+      left: 10%;
+      right: 10%;
+      bottom: 10%;
+      background: #fff;
+      padding: 20px;
+      box-sizing: border-box;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 1s ease, transform 1s ease;
+      z-index: 1;
+    }
+
+    .letter.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h2 {
+      margin: 0 0 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="envelope" id="envelope">
+    <div class="flap" id="flap"></div>
+    <div class="letter" id="letter">
+      <h2>📬 Mensagem Especial</h2>
+      <p>A mensagem já enviou.</p>
+    </div>
+  </div>
+
+  <script>
+    // Aguarda 3 segundos para abrir a carta
+    setTimeout(() => {
+      document.getElementById('flap').classList.add('open');
+      document.getElementById('letter').classList.add('show');
+    }, 3000);
+  </script>
+
+</body>
+</html>
